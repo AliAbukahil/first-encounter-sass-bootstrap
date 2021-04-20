@@ -7,9 +7,11 @@ $items-count: 30; // corresponds to the number of divs in your HTML
   0% {
     transform: scaleY(1);
   }
-
+  50% {
+    transform: scale(2);
+  }
   100% {
-    transform: scaleY(1.4);
+    transform: scaleY(3);
   }
 }
 
@@ -40,7 +42,7 @@ body {
     background: linear-gradient(
       to bottom right,
       lighten(orange, random(40)),
-      rgba(darken(orange, random(10)), 1)
+      rgba(darken(rgb(150, 19, 190), random(10)), 1)
     );
     // random() will return a number between 1-100 with no argument being passed to it, or when you pass in a single integer parameter to define the upper limit. random(20) will return a number between 1-20.
     height: random(60) + 10 + vh;
@@ -52,7 +54,7 @@ body {
       background: linear-gradient(
         to top right,
         lighten(gray, random(40)),
-        rgba(darken(gray, random(10)), 1)
+        rgba(darken(rgb(226, 21, 21), random(10)), 1)
       );
     }
     // The lighten() function increases lightness by a fixed amount.
